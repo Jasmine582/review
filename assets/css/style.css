@@ -11750,6 +11750,10 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
+.services img {
+  margin-left: 8rem;
+}
+
 footer i {
   margin-left: 1.4rem;
   font-size: 1.9rem;
