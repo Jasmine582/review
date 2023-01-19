@@ -11715,6 +11715,10 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(53, 60, 107, 0.95), rgba(80, 110, 119, 0.95));
 }
 
+.skin {
+  background-color: green;
+}
+
 .intro-section {
   background: linear-gradient(to right, rgba(53, 60, 107, 0.95), rgba(80, 110, 119, 0.95));
   padding: 10rem 0 0 0;
