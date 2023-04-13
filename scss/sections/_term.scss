@@ -1,0 +1,11 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.term-section{
+
+  h1 {
+    margin-top: 10%;
+    background-color: $primary;
+    color:#fff;
+  }
+}

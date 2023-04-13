@@ -11722,6 +11722,28 @@ textarea.form-control-lg {
   height: 100%;
 }
 
+.intros .rounded-pill {
+  font-family: Helvetica, Arial, sans-serif;
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #7465a3;
+  font-size: 20px;
+  border-radius: 25px;
+  padding: 0 33px;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+}
+.intros .rounded-pill a {
+  color: #fff;
+  text-decoration: none;
+}
 .intros .video-box {
   position: relative;
 }
@@ -11750,21 +11772,13 @@ textarea.form-control-lg {
   animation-delay: 1.5s;
 }
 
-.mission {
-  margin-top: -5rem;
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 600px;
 }
 
-@media screen and (min-width: 800px) {
-  .mission {
-    margin-top: -1rem;
-  }
-  .vision-section h2 {
-    font-size: 3.5rem;
-  }
-  .vision-section .lh-lg {
-    font-size: 1.7rem;
-  }
-}
 footer i {
   margin-left: 1.4rem;
   font-size: 1.9rem;
@@ -11772,6 +11786,12 @@ footer i {
 
 .footer-bottom__copyright {
   font-size: 0.81rem;
+}
+
+.term-section h1 {
+  margin-top: 10%;
+  background-color: #353c6b;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
