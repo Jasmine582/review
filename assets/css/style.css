@@ -11774,11 +11774,11 @@ textarea.form-control-lg {
 
 #mc_embed_signup {
   background: #fff;
-  clear: left;
   font: 14px Helvetica, Arial, sans-serif;
   width: 100%;
 }
-#mc_embed_signup .optionalParent {
+
+.optionalParent {
   margin-left: 8em;
 }
 
