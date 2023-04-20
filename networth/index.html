@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🧮 | JasDevelops LLC </title>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800;900&family=Prata&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/vendors/css/glightbox.min.css">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+        <img src="/images/white-logo.png" alt="JasDevelops logo image"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link glightbox" href="#meet">Meet The Founder</a>
+            </li>
+         <button type="button" class="rounded-pill btn-rounded"><a href="http://eepurl.com/iowHH2" target="_blank">Subscribe</a>
+        <span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </span></button>
+        </div>
+      </div>
+    </nav>
+  <section class="networth">
+  <div class="net_container">
+    <div class="balance">
+      <span class="totalBalVal">
+        $0.00.00
+    </span>
+        <span class="totalBal">
+            Net worth
+        </span>
+       
+        <div class="results">
+            <div>
+                <div class="resultType">
+                    <ion-icon class="up" name="arrow-round-up"></ion-icon>
+                    <span class="resultTitle">
+                        Assets
+                    </span>
+                </div>
+                <span class="incomeValue">
+                    $0.00.00
+                </span>
+            </div>
+            <div>
+                <div class="resultType">
+                    <ion-icon class="down" name="arrow-round-down"></ion-icon>
+                    <span class="resultTitle">
+                        Liabilities
+                    </span>
+                </div>
+                <span class="expenseValue">
+                    $0.00.00
+                </span>
+            </div>
+        </div>
+    </div>
+    <progress class="progress" value="3333" max="10000"></progress>
+    <div class="addButtons">
+      <button onclick="showAmmountInterface()" class="addIncome">
+        Add Assets
+    </button>
+        <button onclick="showProductInterface()" class="addExpense">
+            Add Liabilities
+        </button>
+    </div>
+    <div class="productInterface hide">
+        <span onclick="closeInterFace()" class="close">
+            &times
+        </span>
+        <div class="liabilities">
+        <h3>Liabilities</h3>
+        <input type="text" class="productName" placeholder="Liability Type (ex.Consumer Debt)">
+        <input type="text" class="productType" placeholder="Item (ex. Visa Credit Card)">
+        <input type="number" class="productCost" placeholder="Total Amount still owed (ex. $300)">
+        <p><strong>Liability Type</strong> is <em>consumer debt, personal loans, student loans, mortgages, auto loans, and/or other debt</em></p>
+        <p><strong>Item</strong>: <em>credit card company,auto loan company,student loan company,mortgage company, medical, pay day loan, etc.</em></p>
+        <p><strong>Still Owed</strong>: <em>balances left on the liability item</em></p>
+        </div>
+        <button onclick="addProducts()" class="addProduct">
+            Add Liability
+        </button>
+        <button onclick="updateTransactions()" class="updateProduct">
+            Update Product
+        </button>
+    </div>
+    <div class="ammountInterface hide">
+        <span onclick="closeInterFace()" class="close">
+            &times
+        </span>
+        <div class="asset">
+        <h3>Assets</h3>
+        <input type="text" class="incomeSource" placeholder="Asset Type (ex. Cash on hand) ">
+        <input type="text" class="incomeType" placeholder="Item (ex. Cash)">
+        <input type="number" class="incomeAmmount" placeholder="Value (ex. 80.99)">
+        <p><strong>Asset Types</strong> are <em>cash, checking accounts, savings accounts,retirement savings,real estate,investments,autos, jewelry</em></p>
+        <p><strong>Asset Item</strong>: <em>cash, credit union accounts or bank account name, savings account name,retirement accounts,real estate,investments,auto, diamond ring</em></p>
+        <p><strong>Asset Value</strong>: <em>Value of the asset</em></p>
+      </div>
+        <button onclick="addAmmounts()" class="addAmmount">
+            Add Asset
+        </button>
+        <button onclick="updateTransactions()" class="updateAmmount">
+            Update Amount
+        </button>
+    </div>
+    <div class="deleteInterface">
+        <ion-icon class="warningIcon" name="warning"></ion-icon>
+        <span class="warningHeading">
+            Confirm
+        </span>
+        <div class="warningMessage">
+        </div>
+        <div class="deleteActions">
+            <button onclick="deleteTrans()" class="deleteNow">
+                Delete
+            </button>
+            <button onclick="hideDelete()" class="cancelNow">
+                Cancel
+            </button>
+        </div>
+    </div>
+    <div class="transList">
+        <div class="trans">
+            <div class="item">
+                <div class="iconDetails">
+                    <ion-icon class="transIcon" name="cash"></ion-icon>
+                    <div class="itemDetails">
+                        <span class="itemName">
+                            Job
+                        </span>
+                        <span class="itemType">
+                            Primary Job
+                        </span>
+                    </div>
+                </div>
+                <div class="itemDetails">
+                    <span class="itemPrice">
+                        $500.00
+                    </span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="edit">
+                    <ion-icon class="actionIcon" name="create"></ion-icon>
+                    <span class="editTitle">
+                        Edit
+                    </span>
+                </button>
+                <button class="delete">
+                    <ion-icon class="actionIcon" name="trash"></ion-icon>
+                    <span class="deleteTitle">
+                        Delete
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="trans">
+            <div class="item">
+                <div class="iconDetails">
+                    <ion-icon class="transIcon" name="cash"></ion-icon>
+                    <div class="itemDetails">
+                        <span class="itemName">
+                            Part Time
+                        </span>
+                        <span class="itemType">
+                            Side Income
+                        </span>
+                    </div>
+                </div>
+                <div class="itemDetails">
+                    <span class="itemPrice">
+                        $300.00
+                    </span>
+                    <span class="itemTime">
+                        11/30/2022
+                    </span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="edit">
+                    <ion-icon class="actionIcon" name="create"></ion-icon>
+                    <span class="editTitle">
+                        Edit
+                    </span>
+                </button>
+                <button class="delete">
+                    <ion-icon class="actionIcon" name="trash"></ion-icon>
+                    <span class="deleteTitle">
+                        Delete
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--Pop up warning-->
+<div class="snackBar">
+  All Fields Are Required
+</div>
+<footer class="footer">
+  <div class="footer-sm" style="background-color: #9db4b7;">
+    <div class="container">
+      <div class="row py-4 text-center text-primary">
+        <div class="icons text-center">
+        
+          <a href="https://www.instagram.com/jasdevelops/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-bottom__copyright mt-2">
+          &COPY;<script>document.write(new Date().getFullYear())</script> JasDevelops LLC |  
+          All Rights Reserved  <p><a href="/terms/terms.html">Terms and Conditions</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/jasdevelops/15min', text: 'Book A Free Consultation', color: '#353c6b', textColor: '#ffffff', branding: false }); }
+</script>
+<!--Script for javascript-->
+<script src="script.js"></script>
+<!--Script for icons-->
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+<script src="//embed.typeform.com/next/embed.js"></script>
+<script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="/assets/vendors/js/glightbox.min.js"></script>
+<script type="text/javascript">
+  const lightbox = GLightbox({
+    'href': '/images/2.png',
+        'type': 'image',
+        'title': 'Founder | CEO',
+        'description': "Growing up and seeing how my parents handled their finances pushed me into having a poverty mindset. I believed that I will never have enough money to achieve my goals or build wealth. But then again, I did not know the definition of what wealth was, since I always heard from my family and friends that wealth was only for rich, white people or eventually we will win the state lottery so there’s no need to save or invest. When I joined the United States Army I had the mentality that I worked hard so therefore, I deserved to purchase anything I wanted. Little did I know I was racking up $110,000 worth of debt that was not student loans. My debt was a mixture of credit cards, car loans, timeshare and personal loans due to my mom not having life insurance when she passed away from breast cancer. The last year of my military service I had to go through series of workshops which were week long to work on resumes, Linkedin profiles and I remember only having two hours on how to create a budget and find a job. I was supposed to find a job or new career that was in the same salary cap, which is a double edge sword since being in the military I had some many job titles.When I left military service I had $82K in debt and I was determined to get out. I googled everything about getting out of debt, watched YouTube videos, purchased books and eventually after hard work, sweat and tears. I became debt free. I became a certified personal finance coach because I want to help women with their personal finances so they can secure that financial freedom they desire and perhaps don't have to struggle like so many of us have before in the past.",
+    });
+</script>
+</body>
+</html>
