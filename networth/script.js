@@ -235,7 +235,7 @@ function displayItems(){
     if(tasksObj.length != 0){
         transList.innerHTML = html;
     } else {
-        transList.innerHTML = `<span class="noTasks">Let's get started, Add all your assets and liabilities to calculate your net worth!</span>`;
+        transList.innerHTML = `<span class="noTasks">Let's get started. Add all your assets and liabilities to calculate your net worth!</span>`;
     }
 }
 
